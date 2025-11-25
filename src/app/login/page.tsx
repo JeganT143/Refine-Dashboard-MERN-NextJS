@@ -1,11 +1,14 @@
 "use client";
 
+import { yariga } from "@/assets";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { useLogin } from "@refinedev/core";
 import { ThemedTitle } from "@refinedev/mui";
+
+// logo
 
 export default function Login() {
   const { mutate: login } = useLogin();
@@ -17,6 +20,7 @@ export default function Login() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "#FCFCFC",
       }}
     >
       <Box
@@ -44,8 +48,8 @@ export default function Login() {
           Powered by
           <img
             style={{ padding: "0 5px" }}
-            alt="Google"
-            src="https://refine.ams3.cdn.digitaloceanspaces.com/superplate-auth-icons%2Fgoogle.svg"
+            alt="yariga logo"
+            src={yariga.src}
           />
           Google
         </Typography>
